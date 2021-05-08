@@ -1,0 +1,80 @@
+hr {
+  width: 65%;
+  background-color: lightblue;
+}
+
+h1 {
+  text-align: center;
+  text-decoration: underline;
+}
+
+h4 {
+
+}
+
+p {
+  font-size: 18px;
+}
+
+
+/* Class Selectors */
+
+/* Divs */
+
+.header {
+  text-align: right;
+  background-image: url(../static/images/notebook.jpeg);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  height: 400px;
+  padding-bottom: 10px;
+}
+
+.header-text{
+  color: white;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.title {
+  border-style: double;
+  border-width: 5px;
+  border-color: white;
+  display: inline-block;
+  padding: 10px;
+}
+
+.illustration {
+  text-align: center;
+  padding: 20px;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.introduction {
+  text-align: center;
+  padding: 20px;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.skills {
+  text-align: justify;
+  padding: 20px;
+  width: 50%;
+  margin: 0 auto;
+}
+
+/* text */
+
+.content {
+  text-align: justify;
+}
+
+/* Images */
+.drivetrain {
+  width: 60%;
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+}

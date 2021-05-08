@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="vehicle-prices.css">
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <title>Vehicle Sale Price Estimator Web-App</title>
+  </head>
+  <body>
+
+      <!-- Navbar and header -->
+      <div class="header">
+        <nav class="navbar navbar-dark navbar-expand-lg">
+                <a class="navbar-brand" href="../../../index.html">Jonathan Okeke</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                          <li class="nav-item">
+                              <a class="nav-link" href="../../../index.html">About</a>
+                          </li>
+                            <a class="nav-link" href="../../../resume/resume.html">Resumé</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../../portfolio/portfolio.html">Project Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="../../../contact/contact.html">Get in touch</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/JonathanOkeke" target="_blank">GitHub</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="static/images/CV_Jonathan_Okeke.pdf" target="_blank"><img src="../../../static/images/cv_svg.png" alt=""></a>
+                        </li>
+                    </ul>
+                </div>
+           </nav>
+           <div class="header-text">
+             <h2 class="title">Pre-Owned Vehicle Sale Price Estimator Web-App</h2>
+           </div>
+      </div>
+      <hr>
+
+      <!-- Content -->
+      <div class="introduction">
+        <h1>Project Summary</h1>
+        <p> Developed a web-based tool that any sedan vehicle owner can use to get an estimate of what their vehicle would be worth based on various factors.</p>
+        <p>The service uses a trained XGBoost linear regression model, trained on historical vehicle data obtained from Kaggle, to make a vehicle sale price estimate.</p>
+        <p>The model was wrapped as a Flask Web Application and deployed to the internet using Heroku.</p>
+      </div>
+      <hr>
+
+      <div class="skills">
+        <h1>Skills & Technologies Used</h1>
+        <br>
+        <h3>Web Application Development & Model Deployment</h3>
+        <li>Flask</li>
+        <li>Heroku</li>
+        <br>
+        <h3>Machine Learning & Modelling</h3>
+        <li>Sci-Kit Learn</li>
+        <li>Pandas, NumPy and Matplotlib</li>
+      </div>
+      <hr>
+
+      <div class="row" style="padding: 20px;">
+        <div class="col-lg-6" style="text-align: justify;">
+          <div class="" style="width:70%; margin:0 auto;">
+            <h2 style="text-align:center;">The Data</h2>
+            <p>The dataset used for this project was retrieved from Kaggle at: <a href="https://www.kaggle.com/nehalbirla/vehicle-dataset-from-cardekho">Kaggle Link</a> </p>
+            <hr>
+            <h3 style="text-align:center;">Data Features</h3>
+            <li>Year - year of manufacture.</li> <br>
+            <li>Present Price - price of the vehicle if newly purchased from a dealership. ( In Indian Rupees (Lakhs)). Where 1 Lakh = 100,000 Rupees</li> <br>
+            <li>Kms_Driven - the odometer in kilometers throughout the car’s use.</li> <br>
+            <li>Fuel_Type - type of fuel the vehicle runs on (Diesel/Petrol/CNG)</li> <br>
+            <li>Seller_Type - mode through which the vehicle is being sold (Dealer/Individual)</li> <br>
+            <li>Transmission - vehicle transmission type (Automatic/Manual)</li> <br>
+            <li>Owner - number of previous owners.</li> <br>
+            <li>Selling_Price - the price that the pre-owned vehicle was actually sold for. (In Indian Rupees (Lakhs)). Where 1 Lakh = 100,000 Rupees</li>
+            <br>
+            <h4 style=" text-decoration: underline; color: red;">Important Note.</h4>
+            <h5 style=" color: red;">All prices were converted from Indian Rupees to South African Rands (ZAR).</h5>
+          </div>
+
+        </div>
+        <div class="col-lg-6" style="width:30%; margin:0 auto; text-align:justify;">
+          <div class=" " style="width:70%; margin:0 auto;">
+            <h2 style="text-align:center;">Modelling</h2>
+            <p>The Selling_Price feature was the ground truth, leaving features 1-7 as the features from which the model would learn from.</p>
+            <p>Four different estimators were experimented with for this project. They were:-</p>
+            <li>Random Forest Regressor</li>
+            <li>Vanilla Linear Regressor</li>
+            <li>Ridge Regressor</li>
+            <li>XGB Regressor (xgboost)</li>
+            <br>
+            <hr>
+            <h3 style="text-align:center;">Evaluation Metrics</h3>
+            <p><strong>A five-fold cross valdated R^@ and MSE score were used to evaluate the four models.</strong></p>
+            <hr>
+            <h3 style="text-align:center;">Modelling Results</h3>
+            <p>Of the four fitted and evaluated estimators, the XGB Regressor model performed the best (metric-wise).</p>
+            <br>
+            <div class="" style="text-align:center;">
+              <img src="../../../static/images/model_comparison.png" alt="" style=" border:2px; border-style: solid;">
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+
+      <div class="introduction">
+        <h2 style="text-align:center;">Investigative Insights</h2>
+        <br>
+        <h3 style="text-align:center;">Feature Importance</h3>
+        <div class="" style="text-align:center;">
+          <img src="../../../static/images/feature_importance.png" alt="" style=" border:2px; border-style: solid;">
+        </div>
+        <br>
+        <p>The feature importance analysis revealed:</p>
+        <ol>
+          <li>The Present_Price (current new vehicle sale price) is the most important feature.</li>
+          <li>The Age of the vehicle was the second most important feature.</li>
+          <li>The Kms_Driven by the vehicle was the third most important feature.</li>
+        </ol>
+      </div>
+      <hr>
+
+      <div class="introduction">
+        <h2 style="text-align:center;">Investigation Summary</h2>
+        <h5>These findings fall right in line with the general vehicle value trends which are mainly determined by their depreciation due to their off-the-lot price, their age and mileage.</h5>
+      </div>
+
+  </body>
+</ht

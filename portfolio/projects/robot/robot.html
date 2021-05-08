@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="robot.css">
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <title>Autonomous Waste-Sorting Robot</title>
+  </head>
+  <body>
+    <!-- Navbar and header -->
+      <div class="header">
+        <nav class="navbar navbar-dark navbar-expand-lg">
+                <a class="navbar-brand" href="../../../index.html">Jonathan Okeke</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav ml-auto">
+                      <li class="nav-item">
+                          <a class="nav-link" href="../../../index.html">About</a>
+                      </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../../resume/resume.html">Resumé</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../../portfolio/portfolio.html">Project Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="../../../contact/contact.html">Get in touch</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/JonathanOkeke" target="_blank">GitHub</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="static/images/CV_Jonathan_Okeke.pdf" target="_blank"><img src="../../../static/images/cv_svg.png" alt=""></a>
+                        </li>
+                    </ul>
+                </div>
+           </nav>
+           <div class="header-text">
+             <h2 class="title">Autonomous Waste-Sorting Robot</h2>
+           </div>
+      </div>
+      <hr>
+
+      <!-- Content -->
+      <br>
+      <h1>Project Demonstration</h1>
+      <br>
+      <div class="embed-responsive embed-responsive-16by9" style="width: 50%; padding: 20px; margin: 0 auto;">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/jpArZs5jvVg"></iframe>
+      </div>
+      <hr>
+
+      <div class="introduction">
+        <h1>Project Summary</h1>
+        <p>I designed and built an automated waste sorting system that comprised of a robotic manipulator, powered by an intelligent vision system that leveraged a convolutional neural network to perform the real-time waste classification.</p>
+      </div>
+      <hr>
+
+      <!-- Images -->
+      <div class="row" style="text-align: center; padding: 20px;">
+        <div class="col-lg-4">
+          <h2>Robotic System Setup</h2>
+          <img class="robot" src="../../../static/images/robot2.jpeg" alt="">
+        </div>
+        <div class="col-lg-4">
+          <h2>Subsystem Connection Diagram</h2>
+          <img class="flow-diagram" src="../../../static/images/robot3.jpeg" alt="">
+        </div>
+        <div class="col-lg-4">
+          <h2>The Robot in Action</h2>
+          <img class="robot" src="../../../static/images/robot_sort.jpg" alt="">
+        </div>
+        </div>
+        <hr>
+
+        <div class="illustration">
+          <h2>Visualisation of the Real-Time Object Detection and Classification performed by the Convolutional Neural Network</h2>
+          <br>
+          <img class="nn" src="../../../static/images/5 objects.jpg" alt="">
+        </div>
+        <hr>
+
+        <!-- Skills & Technologies -->
+        <div class="skills">
+          <h1>Skills & Technologies Used</h1>
+          <ul>
+            <li>Inverse kinematic modelling using trigonometry.</li>
+            <li>Python programming language.</li>
+            <li>TensorFlow.</li>
+            <li>OpenCV.</li>
+          </ul>
+        </div>
+        <hr>
+
+        <!-- Subsystems -->
+        <h1>Subsystem Design Breakdown</h1>
+        <br>
+        <div class="row" style="text-align: center; padding: 20px;">
+          <div class="col-lg-6">
+            <div class="" style="width: 50%; margin: 0 auto;">
+              <h2>The Robot Body</h2>
+              <p>Comprised of:</p>
+              <ul style="text-align: justify;">
+                <li>A 3-D printed 4DOF robotic arm.</li>
+                <li>A single web-camera served as the robot’s vision sensor.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="" style="width: 50%; margin: 0 auto;">
+              <h2>The "Brains" of the Robot</h2>
+              <p>Comprised of:</p>
+              <ul style="text-align: justify;">
+                <li>A convolutional neural network that was trained to detect and classify the five main classes of recyclable waste materials (plastic, paper, metal, cardboard and glass)..</li>
+                <li>The CNN model was trained using Transfer Learning on the the MobileNet v2 base model architecture.</li>
+                <li>Leveraged the TensorFlow and OpenCV frameworks.</li>
+              </ul>
+          </div>
+        </div>
+  </body>
+</ht
